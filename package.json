@@ -1,0 +1,31 @@
+{
+  "name": "makemytripmfe",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "workspaces": [
+    "shell-app",
+    "flights-app",
+    "hotels-app",
+    "trains-app"
+  ],
+  "scripts": {
+    "dev:flights": "cd flights-app && npm run dev",
+    "dev:trains": "cd trains-app && npm run dev",
+    "dev:shell": "cd shell-app && npm run dev",
+    "dev": "npm run build && concurrently \"npm run dev:flights\" \"npm run dev:trains\" \"npm run dev:shell\"",
+    "build:shell": "cd shell-app && npm run build",
+    "build:flights": "cd flights-app && npm run build",
+    "build:trains": "cd trains-app && npm run build",
+    "build": "npm run build:shell && npm run build:flights && npm run build:trains",
+    "preview:flights": "cd flights-app && npm run preview",
+    "preview:trains": "cd trains-app && npm run preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
