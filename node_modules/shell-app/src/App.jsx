@@ -23,7 +23,7 @@ function App() {
       <BrowserRouter>
         <Navigation />
         <Routes>
-          <Route path="/flights" element={<FlightsApp />} />
+          <Route path="/" element={<FlightsApp />} />
         </Routes>
       </BrowserRouter>
     </>
