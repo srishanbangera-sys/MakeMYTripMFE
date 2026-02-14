@@ -15,7 +15,7 @@
     "dev:flights": "cd flights-app && npm run dev",
     "dev:trains": "cd trains-app && npm run dev",
     "dev:shell": "cd shell-app && npm run dev",
-    "dev": "npm run build && concurrently \"npm run preview:flights\" \"npm run preview:trains\" \"npm run preview:shell\"",
+    "dev": "npm run build && concurrently \"npm run dev:shell\" \"npm run preview:flights\" \"npm run preview:trains\"",
     "build:shell": "cd shell-app && npm run build",
     "build:flights": "cd flights-app && npm run build",
     "build:trains": "cd trains-app && npm run build",
